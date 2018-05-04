@@ -29,22 +29,14 @@ class media
 
 		stop()
 		{
-			songs.pause();
-			songs.currenTime=0;
+			songs.currentTime=0;
+			songs.pause()
 			// songs.src=musiclist[playliststatus];
 		}
 
 		ff()
 		{
-			songs.pause()
-			if(playliststatus==playliststatus && playliststatus!=musiclist.length-1)
-			{
-				
-				playliststatus = playliststatus+1
-				songs.src=musiclist[playliststatus]
-				songs.play();
-			}
-			else if(playliststatus>musiclist.length-1)
+			if(playliststatus>musiclist.length-1)
 			{
 				playliststatus = 0
 				songs.src=musiclist[playliststatus]
@@ -79,7 +71,7 @@ class media
 				box.style.margin = "5px"
 				box.innerHTML = musiclist[i]
 				box.id="button"+musiclist[i]
-				var "button"+musiclist[i] = document.getElementById("button"+musiclist[i])
+				// var "button"+musiclist[i] = document.getElementById("button"+musiclist[i])
 				document.body.appendChild(box)
 			}	
 		}
