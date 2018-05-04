@@ -65,11 +65,12 @@ class media
 			songs.play();
 		}
 
-		createBox()
+		createBox() // used to create playlist
 		{
 			for(var i=0;i<musiclist.length;i++)
 			{	
 				var box = document.createElement("div")
+
 				box.style.width = "150px"
 				box.style.height = "30px"
 				// box.style.backgroundColor = "red"
@@ -77,6 +78,8 @@ class media
 				box.style.display = "inline-block"
 				box.style.margin = "5px"
 				box.innerHTML = musiclist[i]
+				box.id="button"+musiclist[i]
+				var "button"+musiclist[i] = document.getElementById("button"+musiclist[i])
 				document.body.appendChild(box)
 			}	
 		}
